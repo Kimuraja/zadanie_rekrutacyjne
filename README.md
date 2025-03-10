@@ -1,54 +1,47 @@
-# React + TypeScript + Vite
+# Instalacja
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Vite to szybki i lekki bundler do projektów JavaScript/TypeScript, który jest świetnym narzędziem do tworzenia aplikacji front-endowych. Aby zainstalować i uruchomić projekt za pomocą Vite, wykonaj poniższe kroki:
 
-Currently, two official plugins are available:
+1. **Zainstaluj Node.js i npm** (jeśli jeszcze nie masz zainstalowanego Node.js):
+   - Pobierz i zainstaluj Node.js ze strony [nodejs.org](https://nodejs.org/).
+   - Po instalacji sprawdź wersję Node.js i npm, wpisując w terminalu:
+     ```bash
+     node -v
+     npm -v
+     ```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. **Zainstaluj Vite**:
+   - W katalogu swojego projektu otwórz terminal i wpisz następujące polecenie, aby stworzyć nowy projekt z Vite:
+     ```bash
+     npm create vite@latest
+     ```
+   - Vite poprosi o nazwę projektu. Wprowadź nazwę projektu, np. `reward-dashboard`, i wybierz framework **React** (jeśli projekt używa Reacta).
+   
+   - Następnie przejdź do katalogu projektu:
+     ```bash
+     cd reward-dashboard
+     ```
 
-## Expanding the ESLint configuration
+3. **Zainstaluj zależności projektu**:
+   - W terminalu wpisz:
+     ```bash
+     npm install
+     ```
+   - To polecenie zainstaluje wszystkie niezbędne pakiety.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+4. **Uruchom aplikację**:
+   - Aby uruchomić projekt w trybie deweloperskim, wpisz:
+     ```bash
+     npm run dev
+     ```
+   - Vite uruchomi serwer deweloperski, który będzie dostępny na lokalnym porcie (domyślnie `http://localhost:5173`). Otwórz tę stronę w przeglądarce.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+
+# Instalacja Tailwind CSS:
+
+- Aby pobrać tailwind wpisz:
+```bash
+     npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
 ```
