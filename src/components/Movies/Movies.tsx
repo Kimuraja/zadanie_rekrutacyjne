@@ -99,7 +99,7 @@ const Movies = () => {
                   </h2>
                   <div className="flex flex-wrap max-w-[15rem] justify-start">
                     {genre_ids?.map((genreId) => {
-                      const genre = genres?.find(g => g.id === genreId);
+                      const genre = genres?.find(genre => genre.id === genreId);
                       return genre ? (
                         <span
                           key={`${id}-${genre.id}`}
